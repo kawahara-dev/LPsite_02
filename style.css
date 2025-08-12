@@ -1094,7 +1094,7 @@
   position: relative;
   list-style: none;
   padding: 15px 45px 15px 25px;
-  border: 1px solid #000474;
+  border: none;
   cursor: pointer;
 }
 
