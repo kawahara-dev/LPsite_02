@@ -635,6 +635,11 @@
   letter-spacing: 0;
   line-height: 28.8px;
   white-space: nowrap;
+  display: none;
+}
+
+.TOP .faq-answer.open {
+  display: block;
 }
 
 .TOP .overlap-group-wrapper {
@@ -677,6 +682,7 @@
   top: 24px;
   left: 880px;
   transform: rotate(-180.00deg);
+  cursor: pointer;
 }
 
 .TOP .arrow-drop-down {
