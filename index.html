@@ -269,45 +269,36 @@
             </div>
           </div>
         </div>
-        <div class="textfield-outlined">
-          <div class="input">
-            <div class="inactive"><div class="text-wrapper-17">貴社名を入力してください</div></div>
+        <form action="#" method="get">
+          <div>
+            <label for="company">貴社名</label>
+            <input id="company" name="company" type="text" placeholder="貴社名を入力してください" />
           </div>
-        </div>
-        <div class="input-wrapper">
-          <div class="input">
-            <div class="inactive"><div class="text-wrapper-17">担当者名を入力してください</div></div>
+          <div>
+            <label for="person">担当者名</label>
+            <input id="person" name="person" type="text" placeholder="担当者名を入力してください" />
           </div>
-        </div>
-        <div class="textfield-outlined-2">
-          <div class="input">
-            <div class="inactive"><div class="text-wrapper-17">メールアドレスを入力してください</div></div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input id="email" name="email" type="email" placeholder="メールアドレスを入力してください" />
           </div>
-        </div>
-        <div class="text-wrapper-18">貴社名</div>
-        <div class="text-wrapper-19">担当者名</div>
-        <div class="text-wrapper-20">メールアドレス</div>
-        <div class="textfield-outlined-3">
-          <div class="input">
-            <div class="inactive"><div class="text-wrapper-17">電話番号を入力してください</div></div>
+          <div>
+            <label for="phone">電話番号</label>
+            <input id="phone" name="phone" type="tel" placeholder="電話番号を入力してください" />
+            <small>ハイフンなし</small>
           </div>
-        </div>
-        <div class="text-wrapper-21">電話番号</div>
-        <div class="text-wrapper-22">ハイフンなし</div>
-        <div class="text-wrapper-23">資料請求の目的</div>
-        <div class="select-outlined">
-          <div class="inactive-wrapper">
-            <div class="inactive-2">
-              <div class="text-wrapper-24">情報収集</div>
-              <div class="arrow-2"><img class="keyboard-arrow-right" src="img/arrow-drop-down-2.svg" alt="下向き矢印アイコン" /></div>
-            </div>
+          <div>
+            <label for="purpose">資料請求の目的</label>
+            <select id="purpose" name="purpose">
+              <option value="">情報収集</option>
+            </select>
           </div>
-        </div>
-        <div class="frame-21"><div class="text-wrapper-25">資料ダウンロード</div></div>
-        <div class="checkbox">
-          <div class="padding"><img class="img" src="img/check-box-filled.svg" alt="チェックボックスアイコン" /></div>
-          <div class="label">プライバシーポリシーに同意する</div>
-        </div>
+          <div>
+            <input id="agree" name="agree" type="checkbox" />
+            <label for="agree">プライバシーポリシーに同意する</label>
+          </div>
+          <button type="submit">資料ダウンロード</button>
+        </form>
         <div class="overlap-7">
           <div class="rectangle-4"></div>
           <div class="group-5">
