@@ -1085,15 +1085,15 @@
 
 .accordion-test {
   position: absolute;
-  width: 960px;
+  width: 100%;
   top: 178px;
-  left: 160px;
+  left: 0;
 }
 
 .accordion-test summary {
   position: relative;
   list-style: none;
-  padding: 15px 45px 15px 25px;
+  padding: 20px 60px 20px 60px;
   border: none;
   cursor: pointer;
 }
@@ -1122,6 +1122,6 @@
 }
 
 .accordion-test .contents {
-  padding: 15px 45px;
+  padding: 20px 60px;
   background: #E8ECF7;
 }
