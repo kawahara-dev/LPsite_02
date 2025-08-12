@@ -346,6 +346,11 @@
       if (arrow && answer) {
         arrow.addEventListener('click', function() {
           answer.classList.toggle('open');
+          if (answer.classList.contains('open')) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = '0';
+          }
         });
       }
     });
