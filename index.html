@@ -125,60 +125,33 @@
             <div class="cta-description">導入事例についての<br />資料ダウンロード</div>
           </div>
         <div class="overlap-4">
-          <div class="group">
-            <div class="overlap-5 faq-item">
-              <div class="rectangle-3"></div>
-              <div class="faq-question">Service Nameでは、どんなことができますか？</div>
-              <div class="faq-answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。</div>
-              <div class="overlap-group-wrapper">
-                <div class="overlap-group-2"><div class="faq-letter">Q</div></div>
-              </div>
-              <div class="arrow"><img class="arrow-drop-down" src="img/arrow-drop-down.svg" alt="下向き矢印アイコン" /></div>
-            </div>
-          </div>
-          <div class="overlap-wrapper">
-            <div class="overlap-6 faq-item">
-              <div class="faq-question">質問が入ります。質問が入ります。質問が入ります。質問が入ります。</div>
-              <div class="faq-answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。</div>
-              <div class="overlap-group-wrapper">
-                <div class="overlap-group-2"><div class="faq-letter">Q</div></div>
-              </div>
-              <div class="arrow"><img class="arrow-drop-down-2" src="img/arrow-drop-down-3.svg" alt="下向き矢印アイコン" /></div>
-            </div>
-          </div>
-          <div class="group-2">
-            <div class="overlap-6 faq-item">
-              <div class="faq-question">質問が入ります。質問が入ります。質問が入ります。質問が入ります。</div>
-              <div class="faq-answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。</div>
-              <div class="overlap-group-wrapper">
-                <div class="overlap-group-2"><div class="faq-letter">Q</div></div>
-              </div>
-              <div class="arrow"><img class="arrow-drop-down-2" src="img/arrow-drop-down-3.svg" alt="下向き矢印アイコン" /></div>
-            </div>
-          </div>
-          <div class="group-3">
-            <div class="overlap-6 faq-item">
-              <div class="faq-question">質問が入ります。質問が入ります。質問が入ります。質問が入ります。</div>
-              <div class="faq-answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。</div>
-              <div class="overlap-group-wrapper">
-                <div class="overlap-group-2"><div class="faq-letter">Q</div></div>
-              </div>
-              <div class="arrow"><img class="arrow-drop-down-2" src="img/arrow-drop-down-3.svg" alt="下向き矢印アイコン" /></div>
-            </div>
-          </div>
-          <div class="group-4">
-            <div class="overlap-6 faq-item">
-              <div class="faq-question">質問が入ります。質問が入ります。質問が入ります。質問が入ります。</div>
-              <div class="faq-answer">回答が入ります。回答が入ります。回答が入ります。回答が入ります。</div>
-              <div class="overlap-group-wrapper">
-                <div class="overlap-group-2"><div class="faq-letter">Q</div></div>
-              </div>
-              <div class="arrow"><img class="arrow-drop-down-2" src="img/arrow-drop-down-3.svg" alt="下向き矢印アイコン" /></div>
-            </div>
-          </div>
           <div class="c-title-main-5">
             <div class="section-title-text">よくあるご質問</div>
             <div class="rectangle-2"></div>
+          </div>
+          <div class="accordion-test">
+            <details>
+              <summary>パスワード忘れたらどうすればいい？</summary>
+              <div class="contents">
+                <p>ログイン画面の「パスワード忘れた？」リンクから再設定できるよ〜！</p>
+              </div>
+            </details>
+            <details>
+              <summary>サブスクのキャンセルってできるの？</summary>
+              <div class="contents">
+                <p>マイページにログインして「契約管理」からキャンセルできちゃう☆</p>
+              </div>
+            </details>
+            <details>
+              <summary>ファイルアップロードのサイズ制限ある？</summary>
+              <div class="contents">
+                <p>最大で10MBまでオッケー！</p>
+                <ul>
+                  <li>画像とかPDFも同じく10MBまで〜</li>
+                  <li>それ以上なら分割してアップしてねん♡</li>
+                </ul>
+              </div>
+            </details>
           </div>
         </div>
         <div class="c-title-main-6">
@@ -335,23 +308,5 @@
         </footer>
       </div>
     </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.querySelectorAll('.faq-item .arrow').forEach(function(arrow) {
-        var item = arrow.closest('.faq-item');
-        var answer = item ? item.querySelector('.faq-answer') : null;
-        if (answer) {
-          arrow.addEventListener('click', function() {
-            answer.classList.toggle('open');
-            if (answer.classList.contains('open')) {
-              answer.style.maxHeight = answer.scrollHeight + 'px';
-            } else {
-              answer.style.maxHeight = '0';
-            }
-          });
-        }
-      });
-    });
-  </script>
   </body>
 </html>
