@@ -1141,3 +1141,48 @@
   padding: 15px 45px;
   background: #E8ECF7;
 }
+
+.TOP .request-form {
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 24px auto;
+}
+
+.TOP .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.TOP .form-group label {
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 16px;
+}
+
+.TOP .form-group input,
+.TOP .form-group select {
+  padding: 8px 12px;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 16px;
+}
+
+.TOP .checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
+.TOP .form-submit {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Noto Sans-Bold", Helvetica;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
