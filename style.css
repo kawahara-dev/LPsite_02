@@ -1094,8 +1094,24 @@
   position: relative;
   list-style: none;
   padding: 15px 45px 15px 25px;
+  padding-left: 60px;
   border: none;
   cursor: pointer;
+}
+
+.accordion-test summary::before {
+  content: "Q";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .accordion-test summary::-webkit-details-marker {
