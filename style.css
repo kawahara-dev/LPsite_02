@@ -913,16 +913,6 @@
   margin-left: 32px;
 }
 
-.TOP .group-5,
-.TOP .group-7,
-.TOP .group-8,
-.TOP .group-9,
-.TOP .group-10 {
-  position: relative;
-  width: 100%;
-  padding-left: 80px;
-}
-
 .TOP .flow-title {
   position: static;
   margin: 16px 0 8px;
@@ -945,32 +935,30 @@
   line-height: 24px;
 }
 
-.TOP .group-6 {
-  position: relative;
-  width: 66px;
-  height: 64px;
-}
-
-.TOP .overlap-group-3 {
-  position: relative;
-  width: 64px;
-  height: 64px;
-  background-color: #000000;
-  border-radius: 32px;
+.TOP .flow-item {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  padding-left: 80px;
 }
 
 .TOP .flow-step-number {
-  position: static;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f90;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 16px;
   font-family: "Noto Sans-Bold", Helvetica;
   font-weight: 700;
-  color: #ffffff;
-  font-size: 32px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 64px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.TOP .flow-text {
+  flex: 1;
 }
 
 
