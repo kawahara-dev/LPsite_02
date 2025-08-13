@@ -176,6 +176,39 @@
           <div class="section-title-text">まずは資料請求</div>
           <div class="rectangle-2"></div>
         </div>
+        <form action="#" method="post" class="request-form">
+          <div class="form-group">
+            <label for="company">貴社名</label>
+            <input id="company" name="company" type="text" placeholder="貴社名を入力してください" required />
+          </div>
+          <div class="form-group">
+            <label for="person">担当者名</label>
+            <input id="person" name="person" type="text" placeholder="担当者名を入力してください" required />
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input id="email" name="email" type="email" placeholder="メールアドレスを入力してください" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号</label>
+            <input id="phone" name="phone" type="tel" placeholder="電話番号を入力してください" required />
+            <small>ハイフンなし</small>
+          </div>
+          <div class="form-group">
+            <label for="purpose">資料請求の目的</label>
+            <select id="purpose" name="purpose" required>
+              <option value="">選択してください</option>
+              <option value="info">情報収集</option>
+              <option value="compare">比較検討</option>
+              <option value="introduce">導入予定</option>
+            </select>
+          </div>
+          <div class="form-group checkbox-group">
+            <input id="agree-bottom" name="agree-bottom" type="checkbox" required />
+            <label for="agree-bottom">プライバシーポリシーに同意する</label>
+          </div>
+          <button type="submit" class="form-submit download-button">資料ダウンロード</button>
+        </form>
         <div class="case-studies">
           <div class="paper">
             <div class="card-elements">
@@ -232,39 +265,6 @@
             </div>
           </div>
         </div>
-        <form action="#" method="post" class="request-form">
-          <div class="form-group">
-            <label for="company">貴社名</label>
-            <input id="company" name="company" type="text" placeholder="貴社名を入力してください" required />
-          </div>
-          <div class="form-group">
-            <label for="person">担当者名</label>
-            <input id="person" name="person" type="text" placeholder="担当者名を入力してください" required />
-          </div>
-          <div class="form-group">
-            <label for="email">メールアドレス</label>
-            <input id="email" name="email" type="email" placeholder="メールアドレスを入力してください" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">電話番号</label>
-            <input id="phone" name="phone" type="tel" placeholder="電話番号を入力してください" required />
-            <small>ハイフンなし</small>
-          </div>
-          <div class="form-group">
-            <label for="purpose">資料請求の目的</label>
-            <select id="purpose" name="purpose" required>
-              <option value="">選択してください</option>
-              <option value="info">情報収集</option>
-              <option value="compare">比較検討</option>
-              <option value="introduce">導入予定</option>
-            </select>
-          </div>
-          <div class="form-group checkbox-group">
-            <input id="agree-bottom" name="agree-bottom" type="checkbox" required />
-            <label for="agree-bottom">プライバシーポリシーに同意する</label>
-          </div>
-          <button type="submit" class="form-submit download-button">資料ダウンロード</button>
-        </form>
         <div class="overlap-7">
           <div class="rectangle-4"></div>
           <div class="group-5">

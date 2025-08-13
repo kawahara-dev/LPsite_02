@@ -1040,12 +1040,12 @@
 
 .TOP .request-form {
   width: 100%;
-  max-width: 960px;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  margin: 80px auto;
+  margin: 40px auto;
   padding: 40px 16px;
 }
 
