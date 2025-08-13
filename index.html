@@ -129,29 +129,47 @@
             <div class="section-title-text">よくあるご質問</div>
             <div class="rectangle-2"></div>
           </div>
-          <div class="accordion-test">
-            <details>
-              <summary>パスワード忘れたらどうすればいい？</summary>
-              <div class="contents">
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-toggle" aria-expanded="false">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-question-text">パスワード忘れたらどうすればいい？</span>
+                <svg class="faq-arrow" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
                 <p>ログイン画面の「パスワード忘れた？」リンクから再設定できるよ〜！</p>
               </div>
-            </details>
-            <details>
-              <summary>サブスクのキャンセルってできるの？</summary>
-              <div class="contents">
+            </div>
+            <div class="faq-item">
+              <button class="faq-toggle" aria-expanded="false">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-question-text">サブスクのキャンセルってできるの？</span>
+                <svg class="faq-arrow" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
                 <p>マイページにログインして「契約管理」からキャンセルできちゃう☆</p>
               </div>
-            </details>
-            <details>
-              <summary>ファイルアップロードのサイズ制限ある？</summary>
-              <div class="contents">
+            </div>
+            <div class="faq-item">
+              <button class="faq-toggle" aria-expanded="false">
+                <span class="faq-q-icon">Q</span>
+                <span class="faq-question-text">ファイルアップロードのサイズ制限ある？</span>
+                <svg class="faq-arrow" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 10l5 5 5-5" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="faq-answer">
                 <p>最大で10MBまでオッケー！</p>
                 <ul>
                   <li>画像とかPDFも同じく10MBまで〜</li>
                   <li>それ以上なら分割してアップしてねん♡</li>
                 </ul>
               </div>
-            </details>
+            </div>
           </div>
         </div>
         <div class="c-title-main-6">
@@ -339,5 +357,19 @@
         </footer>
       </div>
     </div>
+    <script>
+      document.querySelectorAll('.faq-toggle').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          const answer = btn.nextElementSibling;
+          if (!expanded) {
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          } else {
+            answer.style.maxHeight = 0;
+          }
+        });
+      });
+    </script>
   </body>
 </html>
