@@ -1058,8 +1058,8 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   width: 100%;
 }
 
@@ -1095,7 +1095,7 @@
 .TOP .checkbox-group {
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .TOP .form-submit {
