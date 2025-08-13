@@ -1106,6 +1106,7 @@
 .TOP .checkbox-group {
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .TOP .form-submit {
