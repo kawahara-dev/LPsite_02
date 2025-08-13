@@ -259,9 +259,11 @@
 }
 
 .TOP .hero-cta-button {
-  width: 343px;
+  width: 100%;
+  max-width: 343px;
   position: static;
   margin: 0 auto;
+  display: block;
 }
 
 .TOP .cta-button-text {
@@ -459,9 +461,11 @@
 }
 
 .TOP .banner-cta-button {
-  width: 343px;
+  width: 100%;
+  max-width: 343px;
   position: static;
   margin: 0 auto;
+  display: block;
 }
 
 .TOP .polygon {
@@ -512,9 +516,11 @@
 }
 
 .TOP .section-cta-button {
-  width: 343px;
+  width: 100%;
+  max-width: 343px;
   position: static;
   margin: 0 auto;
+  display: block;
 }
 
 .TOP .cta-description {
