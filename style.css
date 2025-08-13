@@ -488,12 +488,13 @@
   position: relative;
   width: 100%;
   max-width: 961px;
-  height: 240px;
+  height: 160px;
   margin: 0 auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .TOP .vector-wrapper {
@@ -513,7 +514,7 @@
   text-align: center;
   letter-spacing: 0;
   line-height: 42px;
-  margin: 0 auto 16px;
+  margin: 16px auto;
 }
 
 .TOP .overlap-2 {
