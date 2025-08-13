@@ -928,35 +928,39 @@
   white-space: nowrap;
 }
 
+
+/* Flow steps layout */
 .TOP .overlap-7 {
-  position: absolute;
-  width: 604px;
-  height: 730px;
-  top: 3691px;
-  left: 340px;
+  position: relative;
+  max-width: 604px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .TOP .rectangle-4 {
   position: absolute;
   width: 1px;
-  height: 680px;
   top: 0;
+  bottom: 0;
   left: 32px;
   background-color: #000000;
 }
 
-.TOP .group-5 {
-  position: absolute;
-  width: 604px;
-  height: 114px;
-  top: 0;
-  left: 0;
+.TOP .group-5,
+.TOP .group-7,
+.TOP .group-8,
+.TOP .group-9,
+.TOP .group-10 {
+  position: relative;
+  width: 100%;
+  padding-left: 80px;
 }
 
 .TOP .flow-title {
-  position: absolute;
-  top: 16px;
-  left: 80px;
+  position: static;
+  margin: 16px 0 8px;
   font-family: "Noto Sans-Bold", Helvetica;
   font-weight: 700;
   color: #000000;
@@ -966,10 +970,8 @@
 }
 
 .TOP .flow-description {
-  position: absolute;
-  width: 520px;
-  top: 66px;
-  left: 80px;
+  position: static;
+  width: auto;
   font-family: "Noto Sans-Regular", Helvetica;
   font-weight: 400;
   color: #000000;
@@ -1008,38 +1010,6 @@
   line-height: 64px;
 }
 
-.TOP .group-7 {
-  position: absolute;
-  width: 604px;
-  height: 114px;
-  top: 154px;
-  left: 0;
-}
-
-.TOP .group-8 {
-  position: absolute;
-  width: 604px;
-  height: 114px;
-  top: 308px;
-  left: 0;
-}
-
-.TOP .group-9 {
-  position: absolute;
-  width: 604px;
-  height: 114px;
-  top: 462px;
-  left: 0;
-}
-
-.TOP .group-10 {
-  position: absolute;
-  width: 604px;
-  height: 114px;
-  top: 616px;
-  left: 0;
-}
-
 
 .TOP .request-form {
   width: 100%;
@@ -1048,8 +1018,8 @@
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  margin: 40px auto;
-  padding: 40px 16px;
+  margin: 60px auto;
+  padding: 32px 16px;
 }
 
 .TOP .form-group {
