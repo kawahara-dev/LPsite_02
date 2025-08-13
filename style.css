@@ -1065,6 +1065,9 @@
 
 
 .TOP .request-form {
+  position: absolute;
+  top: 5500px;
+  left: 160px;
   width: 960px;
   display: flex;
   flex-direction: column;
@@ -1212,6 +1215,11 @@
   .faq-question-text {
     font-size: 18px;
   }
+
+  .TOP .request-form {
+    width: calc(100% - 32px);
+    left: 16px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1227,5 +1235,10 @@
 
   .faq-question-text {
     font-size: 16px;
+  }
+
+  .TOP .request-form {
+    width: calc(100% - 32px);
+    left: 16px;
   }
 }
