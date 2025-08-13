@@ -1102,6 +1102,11 @@
   height: 50px;
 }
 
+.request-form input[type="checkbox"] {
+  width: 21px;
+  height: 21px;
+}
+
 .TOP .checkbox-group {
   flex-direction: row;
   align-items: center;
