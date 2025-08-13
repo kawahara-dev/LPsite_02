@@ -476,7 +476,8 @@
 
 .TOP .polygon {
   position: relative;
-  width: 831px;
+  width: 100%;
+  max-width: 831px;
   height: 75px;
   margin: 0 auto;
   display: block;
