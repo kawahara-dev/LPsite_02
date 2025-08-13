@@ -624,26 +624,6 @@
   white-space: nowrap;
 }
 
-.TOP .faq-answer {
-  position: absolute;
-  top: 113px;
-  left: 40px;
-  font-family: "Noto Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 28.8px;
-  white-space: nowrap;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-.TOP .faq-answer.open {
-  max-height: 1000px;
-}
-
 .TOP .overlap-group-wrapper {
   position: absolute;
   width: 42px;
@@ -1197,6 +1177,8 @@
 }
 
 .faq-answer {
+  position: static;
+  white-space: normal;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s ease;
