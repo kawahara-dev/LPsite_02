@@ -479,6 +479,7 @@
   width: 831px;
   height: 75px;
   margin: 0 auto;
+  display: block;
 }
 
 .TOP .photo-outlined-wrapper {
