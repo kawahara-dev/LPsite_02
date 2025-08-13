@@ -8,8 +8,8 @@
 
 .TOP .div {
   background-color: #ffffff;
-  width: 1280px;
-  height: 6504px;
+  width: 100%;
+  max-width: 1280px;
   position: relative;
 }
 
@@ -102,12 +102,11 @@
 .TOP .footer {
   display: flex;
   flex-direction: column;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   align-items: flex-start;
-  position: absolute;
-  top: 6290px;
-  left: 0;
   background-color: transparent;
+  margin: 40px auto 0;
 }
 
 .TOP .footer-section {
@@ -726,22 +725,21 @@
 }
 
 .TOP .c-title-main-6 {
-  top: 5425px;
-  left: 542px;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  position: absolute;
+  margin: 40px auto;
 }
 
 .TOP .case-studies {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
+  justify-content: center;
   gap: 16px;
-  position: absolute;
-  top: 2791px;
-  left: 160px;
+  width: 100%;
+  margin: 40px auto;
 }
 
 .TOP .paper {
