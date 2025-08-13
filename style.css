@@ -89,6 +89,9 @@
   background-color: #000000;
   border-radius: 4px;
   color: #ffffff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
 }
 
 .TOP .header-cta-button {
