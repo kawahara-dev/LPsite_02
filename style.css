@@ -937,6 +937,13 @@
   line-height: 24px;
 }
 
+.TOP .flow-list {
+  counter-reset: flow-step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .TOP .flow-item {
   display: flex;
   align-items: flex-start;
@@ -944,6 +951,7 @@
 }
 
 .TOP .flow-step-number {
+  counter-increment: flow-step;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -953,10 +961,14 @@
   justify-content: center;
   align-items: center;
   margin-right: 16px;
-  font-family: "Noto Sans-Bold", Helvetica;
+  font-family: "Noto Sans-Bold", Helvetica, sans-serif;
   font-weight: 700;
   font-size: 20px;
   line-height: 40px;
+}
+
+.TOP .flow-step-number::before {
+  content: counter(flow-step);
 }
 
 .TOP .flow-text {
