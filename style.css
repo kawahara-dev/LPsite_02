@@ -916,13 +916,14 @@
 
 .TOP .flow-title {
   position: static;
-  margin: 16px 0 8px;
+  margin: 16px auto 8px;
   font-family: "Noto Sans-Bold", Helvetica;
   font-weight: 700;
   color: #000000;
   font-size: 25px;
   letter-spacing: 0;
   line-height: normal;
+  text-align: center;
 }
 
 .TOP .flow-description {
