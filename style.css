@@ -81,27 +81,22 @@
   height: 28px;
 }
 
+.TOP .download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: #000000;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
 .TOP .header-cta-button {
   display: inline-flex;
   align-items: flex-start;
   padding: 12px 24px;
   position: relative;
   flex: 0 0 auto;
-  background-color: #000000;
-  border-radius: 4px;
-}
-
-.TOP .header-cta-text {
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Noto Sans-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 20px;
-  line-height: 30px;
-  white-space: nowrap;
-  position: relative;
-  letter-spacing: 0;
 }
 
 .TOP .footer {
@@ -261,16 +256,10 @@
 }
 
 .TOP .hero-cta-button {
-  display: flex;
   width: 343px;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
   position: absolute;
   top: 262px;
   left: 469px;
-  background-color: #000000;
-  border-radius: 4px;
 }
 
 .TOP .cta-button-text {
@@ -476,16 +465,10 @@
 }
 
 .TOP .banner-cta-button {
-  display: flex;
   width: 343px;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
   position: absolute;
   top: 487px;
   left: 468px;
-  background-color: #000000;
-  border-radius: 4px;
 }
 
 .TOP .polygon {
@@ -537,16 +520,10 @@
 }
 
 .TOP .section-cta-button {
-  display: flex;
   width: 343px;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
   position: absolute;
   top: 204px;
   left: 468px;
-  background-color: #000000;
-  border-radius: 4px;
 }
 
 .TOP .cta-description {
@@ -1124,12 +1101,10 @@
 .TOP .form-submit {
   align-self: center;
   padding: 12px 24px;
-  background-color: #000000;
-  color: #ffffff;
   font-family: "Noto Sans-Bold", Helvetica;
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 24px;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
 }
 
