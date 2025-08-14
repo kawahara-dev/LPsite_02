@@ -502,6 +502,13 @@
   position: relative;
   width: 64px;
   height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.TOP .photo-outlined-wrapper .vector-2 {
+  margin: 0;
 }
 
 .TOP .service-name-sdgs {
