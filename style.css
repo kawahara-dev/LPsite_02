@@ -473,6 +473,7 @@
   max-width: 343px;
   position: static;
   margin: 0 auto;
+  margin-bottom: 32px;
   display: block;
 }
 
