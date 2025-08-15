@@ -1090,15 +1090,13 @@ small {
 
 /* Footer */
 .footer {
-  position: absolute;
-  left: 0;
-  top: 6290px;
-  width: 1280px;
-  height: 214px;
+  position: static;
+  width: 100%;
+  margin-top: 40px;
+  padding: 20px 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0;
   background: #fff;
   color: #333;
   font-family: "Noto Sans", sans-serif;
