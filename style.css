@@ -353,6 +353,7 @@
   width: 40px;
   height: 4px;
   background-color: #000000;
+  margin-bottom: 0;
 }
 
 .TOP .c-title-main-2 {
@@ -366,20 +367,22 @@
 }
 
 .TOP .c-title-main-3 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin: 40px auto;
   position: relative;
 }
 
 .TOP .c-title-main-4 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 16px;
-  margin: 40px auto;
+  margin: 40px auto 0px; /* 上40px・左右auto・下8px */
   position: relative;
 }
 
@@ -526,10 +529,19 @@
 
 .TOP .overlap-2 {
   position: relative;
-  width: 100%;
+  width: 100vw;            /* ビューポート幅いっぱい */
+  margin: 0;               /* 外側余白をゼロ */
   background-color: #f5f5f5;
   height: 340px;
-  margin: 0;
+
+  display: flex;
+  flex-direction: column;  /* 縦並び */
+  justify-content: center; /* 上下中央 */
+  align-items: center;     /* 左右中央 */
+  text-align: center;      /* テキスト中央寄せ */
+
+  /* 必要に応じてスクロールバー分のズレ補正 */
+  margin-left: calc(50% - 50vw);
 }
 
 .TOP .section-cta-button {
@@ -556,19 +568,30 @@
 
 .TOP .overlap-3 {
   position: relative;
-  width: 100%;
+  width: 100vw;            /* ビューポート幅いっぱい */
+  margin: 0;               /* 外側余白をゼロ */
   background-color: #f5f5f5;
   height: 340px;
-  margin: 0;
+
+  display: flex;
+  flex-direction: column;  /* 縦並び */
+  justify-content: center; /* 上下中央 */
+  align-items: center;     /* 左右中央 */
+  text-align: center;      /* テキスト中央寄せ */
+
+  /* 必要に応じてスクロールバー分のズレ補正 */
+  margin-left: calc(50% - 50vw);
 }
 
 .TOP .overlap-4 {
   position: relative;
-  width: 100%;
+  width: 100vw;               /* ビューポート幅いっぱい */
   background-color: #f5f5f5;
   padding: 40px 0;
   margin: 0;
+  margin-left: calc(50% - 50vw); /* 親の中央寄せを打ち消す */
 }
+
 
 .TOP .group {
   position: relative;
@@ -706,9 +729,10 @@
 }
 
 .TOP .c-title-main-5 {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin: 40px auto;
   position: relative;
@@ -718,8 +742,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   margin: 40px auto;
+  position: relative;
 }
 
 .TOP .case-studies {
@@ -933,103 +959,75 @@
   margin-left: 32px;
 }
 
-.TOP .flow-title {
-  position: static;
-  margin: 16px auto 8px;
-  font-family: "Noto Sans-Bold", Helvetica;
-  font-weight: 700;
-  color: #000000;
-  font-size: 25px;
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: center;
+/* ------------------------------
+   ご利用の流れ（ズレ修正）
+   変数でサイズを一元管理
+------------------------------ */
+.TOP .flow-section {
+  margin-top: 10px; 
+  margin-bottom: 10px; /* 元の値より小さく */
+  padding-bottom: 0;   /* もし不要なら削除 */
 }
 
-.TOP .flow-description {
-  position: static;
-  width: auto;
-  font-family: "Noto Sans-Regular", Helvetica;
-  font-weight: 400;
-  color: #000000;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 24px;
-}
+.TOP .flow-list{
+  --dot-size: 48px;   /* 丸の直径 */
+  --gap: 20px;        /* 丸とテキストの間隔 */
 
-.TOP .flow-list {
-  counter-reset: flow-step;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0;                 /* ← ここを0に */
+  counter-reset: flow-step;
+  position: relative;
 }
 
-.TOP .flow-item {
-  display: flex;
-  align-items: flex-start;
-  padding-left: 80px;
+/* 縦線はリストの左端基準で、丸の中心に */
+.TOP .flow-list::before{
+  content: "";
+  position: absolute;
+  left: calc(var(--dot-size) / 2);
+  top: 50px;      /* ← 上の余白 */
+  bottom: 70px;   /* ← 下の余白 */
+  width: 2px;
+  background: #000;
 }
 
-.TOP .flow-step-number {
+/* 各行の内側に、丸のぶんの余白を確保（テキストを右へ逃がす） */
+.TOP .flow-item{
+  position: relative;
+  display: block; /* flexでもOK */
+  padding-left: calc(var(--dot-size) + var(--gap));  /* ← ここに付ける */
+  margin: 48px 0;
+}
+
+/* 黒い番号丸は left:0 に固定（＝アイテム左端） */
+.TOP .flow-step-number{
   counter-increment: flow-step;
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0; /* 必要なら 2〜4px で微調整 */
+  width: var(--dot-size);
+  height: var(--dot-size);
   border-radius: 50%;
-  background: #f90;
+  background: #000;
   color: #fff;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  margin-right: 16px;
-  font-family: "Noto Sans-Bold", Helvetica, sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 40px;
+  font-size: 18px;
+  line-height: 1;
+  z-index: 1;
 }
+.TOP .flow-step-number::before { content: counter(flow-step); }
 
-.TOP .flow-step-number::before {
-  content: counter(flow-step);
-}
+/* テキスト */
+.TOP .flow-title{ margin: 0 0 8px; font-weight:700; font-size:22px; line-height:1.4; }
+.TOP .flow-description{ margin: 0; font-size:14px; line-height:1.9; color:#333; }
 
-.TOP .flow-text {
-  flex: 1;
-}
-
-
-.TOP .request-form {
-  width: 100%;
-  max-width: 680px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
-  margin: 60px auto;
-  padding: 32px 16px;
-}
-
-.TOP .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
-  text-align: left;
-  width: 100%;
-}
-
-.TOP .form-group label {
-  font-family: "Noto Sans-Regular", Helvetica;
-  font-size: 16px;
-}
-
-.TOP .form-group input,
-.TOP .form-group select {
-  padding: 8px 12px;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  font-family: "Noto Sans-Regular", Helvetica;
-  font-size: 16px;
-  width: 100%;
-  max-width: 680px;
-  height: 50px;
+/* SP調整 */
+@media (max-width: 600px){
+  .TOP .flow-list{ --dot-size: 40px; --gap: 16px; }
+  .TOP .flow-title{ font-size: 18px; }
 }
 
 .request-form input,
@@ -1107,9 +1105,12 @@
 }
 
 .faq-question-text {
+  font-family: "Noto Sans-Bold", Helvetica;
   margin-left: 24px;
   flex: 1;
   text-align: left;
+  font-size: 20px;
+  font-weight: 700; 
 }
 
 .faq-arrow {
