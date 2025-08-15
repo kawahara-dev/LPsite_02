@@ -913,6 +913,26 @@
   .TOP .flow-title{ font-size: 18px; }
 }
 
+.request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+small {
+  display: block;
+  margin-top: 4px;
+  font-size: 12px;
+}
+
 .request-form input,
 .request-form select {
   width: 100%;
