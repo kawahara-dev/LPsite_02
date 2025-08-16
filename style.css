@@ -110,6 +110,13 @@
   margin-left: calc(50% - 50vw);
   height: 366px;
   padding: 0;
+
+  /* hero画像を背景に設定 */
+  background-image: url("img/hero.jpg"); /* 画像ファイル名に合わせて変更 */
+  background-size: cover;           /* セクション全体を覆う */
+  background-position: center;      /* 中央に配置 */
+  background-repeat: no-repeat;
+
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
@@ -921,16 +928,61 @@
   margin: 0 auto;
 }
 
+.request-form input,
+.request-form select {
+  width: 680px;   /* 幅を固定 */
+  height: 50px;   /* 高さを固定 */
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 16px;
+  padding: 0 12px;     /* 左右に余白 */
+  box-sizing: border-box;
+  border: 1px solid #DDDDDD; /* 枠線の色 */
+  border-radius: 8px;        /* 角を丸くする */
+  outline: none;             /* フォーカス時の青枠を消す */
+}
+
 .form-group {
+  font-family: "Noto Sans-Regular", Helvetica;
+  font-size: 14px;  /* 全体の文字サイズ */
   display: flex;
   flex-direction: column;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
+}
+
+
+.form-group input,
+.form-group select {
+  margin-top: 10px; /* ラベルと入力欄の距離を少し短く */
 }
 
 small {
   display: block;
   margin-top: 4px;
   font-size: 12px;
+}
+
+.request-form .checkbox-group {
+  display: flex;
+  align-items: center;     /* 縦方向を中央に */
+  justify-content: center; /* 横方向を中央に */
+  gap: 8px;             /* チェックボックスと文字の間隔 */
+  width: fit-content;      /* 内容幅に縮める */
+  white-space: nowrap;  /* 改行せず1行に固定 */
+  margin: 10px auto;       /* 上下余白＋左右中央寄せ */
+}
+
+.request-form .checkbox-group label {
+  font-size: 16px;
+  font-family: "Noto Sans-Regular", Helvetica;
+  line-height: 1;    /* 行の高さを文字サイズに合わせる */
+  margin: 0;         /* 上下の余白をリセット */
+}
+
+.request-form .checkbox-group input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;         /* 余計な余白をリセット */
+  vertical-align: middle;
 }
 
 .request-form input,
@@ -943,6 +995,33 @@ small {
 .request-form input[type="checkbox"] {
   width: 21px;
   height: 21px;
+}
+
+/* ラベル行 */
+.phone-group .label-row {
+  display: flex;
+  justify-content: space-between; /* 左右に振り分け */
+  align-items: center;            /* 縦位置を中央に */
+  width: 680px;                   /* 入力欄と同じ幅 */
+  margin-bottom: 4px;             /* 下の入力欄との余白 */
+}
+
+
+.phone-group .note {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* 入力欄 */
+.phone-group input {
+  display: block;
+  width: 680px;
+  height: 50px;
+  padding: 0 12px;
+  border: 1px solid #DDDDDD;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .TOP .checkbox-group {
